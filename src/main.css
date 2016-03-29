@@ -43,6 +43,8 @@ html, body, .srk-layout {
 	font-size: 1.3em;
 	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 	color: rgba(0, 0, 0, .8);
+	max-width: 960px;
+	margin: auto;
 }
 
 .srk-main-container > article p,

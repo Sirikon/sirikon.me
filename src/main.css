@@ -20,10 +20,7 @@ html, body, .srk-layout {
 }
 
 .srk-sidemenu-header {
-	background-image: url(../img/header-bg.png);
-	background-size: contain;
-	background-position: right top;
-	padding: 35px;
+	padding: 25px;
 }
 
 .srk-sidemenu-header img {

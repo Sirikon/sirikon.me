@@ -59,3 +59,13 @@ html, body, .srk-layout {
 	font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 	font-size: 1.65em;
 }
+
+.srk-main-container > article h1 a,
+.srk-main-container > article h2 a,
+.srk-main-container > article h3 a,
+.srk-main-container > article h4 a,
+.srk-main-container > article h5 a,
+.srk-main-container > article h6 a {
+	text-decoration: none;
+	color: inherit;
+}

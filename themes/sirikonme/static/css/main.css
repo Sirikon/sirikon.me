@@ -137,3 +137,7 @@ html, body, .srk-layout {
 	margin: auto;
 	margin-top: 25px;
 }
+
+.srk-article-comments-wrapper a {
+	color: #FF4500;
+}

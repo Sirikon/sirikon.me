@@ -36,7 +36,7 @@ html, body, .srk-layout {
 }
 
 .srk-main-container > article {
-	padding: 1px 2em;
+	padding: 1px 40px;
 	font-size: 1.3em;
 	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 	color: rgba(0, 0, 0, .8);
@@ -68,4 +68,72 @@ html, body, .srk-layout {
 .srk-main-container > article h6 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.srk-article-footer-wrapper {
+	padding: 1px 40px;
+	max-width: 960px;
+	margin: auto;
+}
+
+.srk-article-footer {
+	display: table;
+	background-color: #FAFAFA;
+	width: 100%;
+	font-family: "Open Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.srk-article-footer-date {
+	display: table-cell;
+	white-space: nowrap;
+	padding: 20px;
+	color: rgba(0, 0, 0, .8);
+	vertical-align: middle;
+}
+
+.srk-article-footer-date .fa {
+	font-size: 2em;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.srk-article-footer-date span {
+	vertical-align: middle;
+}
+
+.srk-article-footer-filler {
+	display: table-cell;
+	width: 100%;
+}
+
+.srk-article-footer-social {
+	display: table-cell;
+	white-space: nowrap;
+	padding: 20px;
+	font-size: 2em;
+	vertical-align: middle;
+}
+
+.srk-article-footer-social .fa {
+	cursor: pointer;
+	-webkit-filter: grayscale(1);
+}
+
+.srk-article-footer-social .fa:hover {
+	-webkit-filter: grayscale(0);
+}
+
+.srk-article-footer-social .fa.fa-twitter {
+	color: #55acee;
+}
+
+.srk-article-footer-social .fa.fa-facebook-official {
+	color: #3b5998;
+}
+
+.srk-article-comments-wrapper {
+	padding: 1px 40px;
+	max-width: 960px;
+	margin: auto;
+	margin-top: 25px;
 }

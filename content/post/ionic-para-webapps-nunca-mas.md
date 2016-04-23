@@ -1,5 +1,5 @@
 +++
-date = "2016-04-21T21:34:51+02:00"
+date = "2016-04-22T21:34:51+02:00"
 title = "Ionic para WebApps: Nunca más"
 
 +++

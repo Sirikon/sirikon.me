@@ -141,8 +141,7 @@ html, body, .srk-layout {
 .srk-article-comments-wrapper {
 	padding: 1px 40px;
 	max-width: 960px;
-	margin: auto;
-	margin-top: 40px;
+	margin: 40px auto;
 }
 
 .srk-article-comments-wrapper a {

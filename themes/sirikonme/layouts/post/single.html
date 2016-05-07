@@ -1,12 +1,12 @@
-    {{ partial "head.html" . }}
+{{ partial "head.html" . }}
 
-    <body>
-        <div class="srk-layout">
-            {{ partial "sidemenu.html" . }}
-            <div class="srk-main-container">
-              {{ partial "article.html" . }}
-            </div>
+<body>
+    <div class="srk-layout">
+        {{ partial "sidemenu.html" . }}
+        <div class="srk-main-container">
+          {{ partial "article.html" . }}
         </div>
-    </body>
+    </div>
+</body>
 
-</html>
+{{ partial "footer.html" . }}

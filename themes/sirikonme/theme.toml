@@ -1,9 +1,0 @@
-name = "SirikonMe"
-license = "MIT"
-description = "Sirikon.me theme"
-homepage = "https://github.com/sirikon/sirikon.me"
-features = ["blog", ]
-
-[author]
-    name = "Sirikon"
-    homepage = "http://sirikon.me"

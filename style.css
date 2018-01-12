@@ -22,10 +22,29 @@ html, body {
     align-items: center;
 }
 
+@media (max-width: 800px) {
+    .srk-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        font-size: 3.7em;
+    }
+}
+
+@media (max-width: 400px) {
+    .srk-header {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 320px) {
+    .srk-header {
+        font-size: 2em;
+    }
+}
+
 .srk-header-title {
     font-family: 'Overpass Mono', monospace;
     text-rendering: optimizeLegibility;
-    margin-right: 65px;
     margin-top: 0.2em;
 }
 
@@ -42,16 +61,18 @@ html, body {
     display: none;
 }
 
-.srk-header-title p:first-child {
-    /* margin-top: -0.17em; */
-}
-
-.srk-header-title p:last-child {
-    /* margin-bottom: -0.37em; */
-}
-
 .srk-header-image {
     height: 220px;
+    margin-left: 65px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+    .srk-header-image {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
 }
 
 .srk-header-image img {

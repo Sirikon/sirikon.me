@@ -1,0 +1,29 @@
+.srk-topbar {
+    height: 60px;
+    background-color: #fdfdfd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &-content {
+        max-width: 900px;
+        height: 60px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-title {
+        margin-top: .2em;
+        font-family: 'Overpass Mono', monospace;
+        text-rendering: optimizeLegibility;
+        font-size: 2em;
+        flex-grow: 1;
+
+        &-underscore {
+            color: #ff4500;
+        }
+    }
+}

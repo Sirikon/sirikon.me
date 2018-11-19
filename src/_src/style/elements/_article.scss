@@ -1,0 +1,49 @@
+.srk-article {
+    text-rendering: optimizeLegibility;
+    font-family: 'Merriweather', serif;
+    color: rgba(0,0,0,.84);
+
+    h1 {
+        font-size: 3em;
+        margin: 2em 0 1em 0;
+        font-family: 'Overpass Mono', monospace;
+        position: relative;
+        color: black;
+
+        &:before {
+            content: '# ';
+            color: #ff4500;
+            position: absolute;
+            left: -1em;
+        }
+    }
+
+    h2, h3 {
+        font-weight: bold;
+        margin: 2em 0 .5em 0;
+        & + p {
+            margin-top: 0;
+        }
+    }
+
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+
+    p {
+        font-size: 21px;
+        line-height: 1.8em;
+        margin: 2em 0;
+    }
+
+    hr {
+        display: block;
+        margin: 2em auto;
+        width: 200px;
+        border: 0px solid rgba(0,0,0,0.2);
+        border-width: 1px 0 0 0;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+}

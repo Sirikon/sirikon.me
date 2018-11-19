@@ -1,4 +1,9 @@
 .srk-body {
-    max-width: 800px;
+    $padding-size: 60px;
+    $usable-width: 800px;
+
+    max-width: $usable-width + $padding-size;
     margin: auto;
+    padding: 0 $padding-size;
+    box-sizing: border-box;
 }

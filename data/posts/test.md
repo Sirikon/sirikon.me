@@ -1,7 +1,0 @@
----
-title: Amazing Test
-date: 2018-05-05
----
-# Amazing Test
-
-Such a great day to write some Markdown, fellas.

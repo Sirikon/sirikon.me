@@ -8,12 +8,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!-- <div class="srk-topbar">
-            <div class="srk-topbar-content">
-                <h1 class="srk-topbar-title">Sirikon<span class="srk-topbar-title-underscore srk-tick">_</span></h1>
-            </div>
-        </div> -->
-
         <div class="srk-header-wrapper">
             <div class="srk-header">
                 <div>
@@ -39,9 +33,9 @@
                 <div class="srk-article-resume">
                     <% const post = data.posts[postKey] %>
                     <div>
-                        <h1 class="srk-article-resume-title"><span>#</span> <%= post.meta.title %></h1>
+                        <a href="/posts/<%= postKey %>.html" class="srk-article-resume-title"><%= post.meta.title %></a>
                     </div>
-                    <h3 class="srk-article-resume-date"><span>&nbsp;&nbsp;</span><%= post.meta.date %></h3>
+                    <h3 class="srk-article-resume-date"><%= post.meta.date %></h3>
                 </div>
             <% }) %>
         </div>

@@ -1,0 +1,28 @@
+.srk-article-resume {
+    &-title {
+        display: inline-block;
+        padding-top: 0.2em;
+        font-size: 2em;
+        font-family: 'Overpass Mono', monospace;
+
+        span {
+            color: #ff4500;
+        }
+
+        &:hover {
+            background-color: #ff4500;
+            color: white;
+            cursor: pointer;
+            span { color: white; }
+        }
+    }
+    &-date {
+        margin-top: 0.3em;
+        font-family: 'Overpass Mono', monospace;
+        vertical-align: top;
+        span {
+            font-size: 2em;
+            vertical-align: top;
+        }
+    }
+}

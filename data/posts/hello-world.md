@@ -1,7 +1,7 @@
 ---
-title: Amazing Test
+title: Hello World
 date: 2018-05-05
 ---
-# Amazing Test
+# Hello World!
 
 Such a great day to write some Markdown, fellas.

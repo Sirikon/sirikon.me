@@ -34,9 +34,17 @@
             </div>
         </div>
 
-        <!-- <div class="srk-body">
-            <%= Object.keys(data.posts) %>
-        </div> -->
+        <div class="srk-body">
+            <% Object.keys(data.posts).forEach((postKey) => { %>
+                <div class="srk-article-resume">
+                    <% const post = data.posts[postKey] %>
+                    <div>
+                        <h1 class="srk-article-resume-title"><span>#</span> <%= post.meta.title %></h1>
+                    </div>
+                    <h3 class="srk-article-resume-date"><span>&nbsp;&nbsp;</span><%= post.meta.date %></h3>
+                </div>
+            <% }) %>
+        </div>
 
     </body>
 </html>

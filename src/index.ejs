@@ -1,32 +1,10 @@
 <html>
     <head>
-        <title>Sirikon.me</title>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="theme-color" content="#ff4500">
-        <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <%- include('_src/partials/_head.html', { title: 'sirikon.me' }); %>
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for sirikon.me" href="/index.xml" />
     </head>
     <body>
-        <div class="srk-header-wrapper">
-            <div class="srk-header">
-                <div>
-                    <div class="srk-header-title">
-                        <p>Carlos</p>
-                        <p>Fernández</p>
-                        <p>Llamas<span class="srk-header-title-underscore srk-tick">_</span></p>
-                    </div>
-                    <div class="srk-header-image">
-                        <img src="assets/avatar.png" alt="Avatar" draggable="false">
-                    </div>
-                </div>
-                <div>
-                    <div class="srk-header-subtitle">
-                        <p>// a.k.a. Sirikon</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <%- include('_src/partials/_header.html'); %>
 
         <div class="srk-body">
             <% Object.keys(data.posts).forEach((postKey) => { %>
@@ -40,5 +18,6 @@
             <% }) %>
         </div>
 
+        <%- include('_src/partials/_footer.html'); %>
     </body>
 </html>

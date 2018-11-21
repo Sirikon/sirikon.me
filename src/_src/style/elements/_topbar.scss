@@ -1,9 +1,10 @@
 .srk-topbar {
-    height: 60px;
+    $topbar-height: 80px;
+    height: $topbar-height;
     background-color: #fdfdfd;
     
     &-content {
-        height: 60px;
+        height: $topbar-height;
         display: flex;
         justify-content: flex-start;
         align-items: center;

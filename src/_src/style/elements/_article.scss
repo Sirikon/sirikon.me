@@ -1,20 +1,24 @@
 .srk-article {
     text-rendering: optimizeLegibility;
     font-family: 'Merriweather', serif;
-    color: rgba(0,0,0,.84);
+    color: rgba(0,0,0,.84);    
+    text-rendering: optimizeLegibility;
 
-    h1 {
-        font-size: 3em;
-        margin: 2em 0 1em 0;
+    &-header {
+        margin: 6em 0 3em 0;
         font-family: 'Overpass Mono', monospace;
-        position: relative;
-        color: black;
+        h1 {
+            font-size: 3em;
+            margin: 0 0 .3em 0;
+            position: relative;
+            color: black;
 
-        &:before {
-            content: '# ';
-            color: #ff4500;
-            position: absolute;
-            left: -1em;
+            &:before {
+                content: '# ';
+                color: #ff4500;
+                position: absolute;
+                left: -1em;
+            }
         }
     }
 

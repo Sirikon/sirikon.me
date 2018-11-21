@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title><%= data.settings.title %></title>
+        <link><%= data.settings.url %></link>
+        <description><%= data.settings.description %></description>
+
+        <% Object.keys(data.posts).forEach((postKey) => { %>
+            <% const post = data.posts[postKey] %>
+            <item>
+                <title><%= post.meta.title %></title>
+                <link><%= data.settings.url %>/posts/<%= postKey %>.html</link>
+                <description>
+                    <%= post.html %>
+                </description>
+            </item>
+        <% }) %>
+    </channel>
+</rss>

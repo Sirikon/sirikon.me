@@ -1,26 +1,21 @@
 <html>
     <head>
-        <title><%= params.post.meta.title %> | sirikon.me</title>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="theme-color" content="#ff4500">
-        <link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Merriweather:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="/style.css">
+        <%- include('../partials/_head.html', { title: params.post.meta.title + ' | sirikon.me' }); %>
     </head>
     <body>
-        <div class="srk-topbar">
-            <div class="srk-body">
-                <div class="srk-topbar-content">
-                    <a href="/" class="srk-topbar-title">Sirikon<span class="srk-topbar-title-underscore srk-tick">_</span></a>
-                </div>
-            </div>
-        </div>
+        <%- include('../partials/_topbar.html'); %>
 
         <div class="srk-body">
             <article class="srk-article">
+                <div class="srk-article-header">
+                    <h1><%= params.post.meta.title %></h1>
+                    <span class="srk-article-header-date"><%= params.post.meta.date %></span>
+                </div>
+                
                 <%- params.post.html %>
             </article>
         </div>
+
+        <%- include('../partials/_footer.html'); %>
     </body>
 </html>
-

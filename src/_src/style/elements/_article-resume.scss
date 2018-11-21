@@ -10,6 +10,10 @@
         text-decoration: none;
         position: relative;
 
+        @media (max-width: 320px) {
+            font-size: 1.5em;
+        }
+
         &:before {
             content: '# ';
             color: #ff4500;

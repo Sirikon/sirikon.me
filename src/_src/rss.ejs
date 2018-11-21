@@ -10,9 +10,9 @@
         <% Object.keys(data.posts).forEach((postKey) => { %>
             <% const post = data.posts[postKey] %>
             <item>
-                <guid><%= postKey %></guid>
                 <title><%= post.meta.title %></title>
                 <link><%= data.settings.url %>/posts/<%= postKey %>.html</link>
+                <guid><%= data.settings.url %>/posts/<%= postKey %>.html</guid>
                 <description>
                     <%= post.html %>
                 </description>

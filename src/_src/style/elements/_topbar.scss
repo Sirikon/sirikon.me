@@ -2,12 +2,26 @@
     $topbar-height: 80px;
     height: $topbar-height;
     background-color: #fdfdfd;
+
+    @media (max-width: 330px) {
+        height: auto;
+        padding: 1.2em 0 0 0;
+    }
+
+    .srk-body {
+        margin: 0 auto;
+    }
     
     &-content {
         height: $topbar-height;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        @media (max-width: 330px) {
+            display: block;
+            height: auto;
+        }
     }
 
     &-title {
@@ -20,6 +34,29 @@
 
         &-underscore {
             color: #ff4500;
+        }
+    }
+
+    &-menu {
+        flex-grow: 1;
+        text-align: right;
+
+        @media (max-width: 330px) {
+            text-align: left;
+            margin-top: 5px;
+        }
+
+        &-item {
+            font-family: 'Overpass Mono', monospace;
+            text-decoration: none;
+            color: #ff4500;
+            padding-top: .13em;
+            font-size: 20px;
+
+            &:hover {
+                background-color: #ff4500;
+                color: white;
+            }
         }
     }
 }

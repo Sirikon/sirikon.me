@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <%- include('_src/partials/_head.html', { title: 'not found | sirikon.me' }); %>
+    </head>
+    <body>
+        <%- include('_src/partials/_topbar.html', { currentLink: '' }); %>
+
+        <div class="srk-body">
+            <div class="srk-notfound">
+                <h1>404</h1>
+                <a href="/">< Back to home</a>
+            </div>
+        </div>
+
+        <%- include('_src/partials/_footer.html'); %>
+    </body>
+</html>

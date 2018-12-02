@@ -53,7 +53,7 @@
             padding-top: .13em;
             font-size: 20px;
 
-            &:hover {
+            &:hover, &--current {
                 background-color: #ff4500;
                 color: white;
             }

@@ -58,10 +58,15 @@
     h2 { font-size: 1.8em; }
     h3 { font-size: 1.3em; }
 
-    p {
+    p, ul {
         font-size: 19px;
         line-height: 1.8em;
         margin: 2em 0;
+    }
+
+    ul {
+        list-style: square;
+        padding-left: 2em;
     }
 
     hr {

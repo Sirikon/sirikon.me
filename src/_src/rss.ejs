@@ -10,8 +10,8 @@
         <% data.postsIndex.forEach((post) => { %>
             <item>
                 <title><%= post.title %></title>
-                <link><%= data.settings.url %>/posts/<%= post.slug %></link>
-                <guid><%= data.settings.url %>/posts/<%= post.slug %></guid>
+                <link><%= data.settings.url %>/post/<%= post.slug %></link>
+                <guid><%= data.settings.url %>/post/<%= post.slug %></guid>
                 <pubDate><%= post.date.rss %></pubDate>
                 <description>
                     <%= post.html %>

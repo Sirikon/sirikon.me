@@ -21,7 +21,7 @@ module.exports = {
         result['index.xml'] = { target: '_src/rss.ejs' }
 
         data.postsIndex.forEach((post) => {
-            result['posts/' + post.slug + '/index.html'] = { target: '_src/views/post.ejs', params: { post } }
+            result['post/' + post.slug + '/index.html'] = { target: '_src/views/post.ejs', params: { post } }
         });
 
         return result;

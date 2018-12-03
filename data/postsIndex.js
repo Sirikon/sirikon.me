@@ -18,6 +18,7 @@ function parseDate(rawDate) {
     const d = new Date(Date.UTC(year, month, day, hour, minute));
 
     return {
+        d,
         display: `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1, '00')}-${pad(d.getUTCDate(), '00')} ${pad(d.getUTCHours(), '00')}:${pad(d.getUTCMinutes(), '00')}`,
         rss: `${weekDays[d.getUTCDay()]}, ${pad(d.getUTCDate(), '00')} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()} ${pad(d.getUTCHours(), '00')}:${pad(d.getUTCMinutes(), '00')}:00 GMT`
     }
@@ -38,6 +39,9 @@ module.exports = {
                     date: parseDate(post.meta.date),
                     html: post.html
                 }
+            })
+            .sort((a, b) => {
+                return a.date.d < b.date.d;
             });
     }
 }

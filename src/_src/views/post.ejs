@@ -1,6 +1,6 @@
 <html>
     <head>
-        <%- include('../partials/_head.html', { title: params.post.meta.title + ' | sirikon.me' }); %>
+        <%- include('../partials/_head.html', { title: params.post.title + ' | sirikon.me' }); %>
     </head>
     <body>
         <%- include('../partials/_topbar.html', { currentLink: '' }); %>
@@ -8,8 +8,8 @@
         <div class="srk-body">
             <article class="srk-article">
                 <div class="srk-article-header">
-                    <h1><%= params.post.meta.title %></h1>
-                    <span class="srk-article-header-date"><%= params.post.meta.date %></span>
+                    <h1><%= params.post.title %></h1>
+                    <span class="srk-article-header-date"><%= params.post.date.display %></span>
                 </div>
                 
                 <%- params.post.html %>

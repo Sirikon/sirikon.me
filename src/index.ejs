@@ -7,13 +7,12 @@
         <%- include('_src/partials/_header.html'); %>
 
         <div class="srk-body">
-            <% Object.keys(data.posts).forEach((postKey) => { %>
+            <% data.postsIndex.forEach((post) => { %>
                 <div class="srk-article-resume">
-                    <% const post = data.posts[postKey] %>
                     <div>
-                        <a href="/posts/<%= postKey %>.html" class="srk-article-resume-title"><%= post.meta.title %></a>
+                        <a href="/posts/<%= post.slug %>" class="srk-article-resume-title"><%= post.title %></a>
                     </div>
-                    <h3 class="srk-article-resume-date"><%= post.meta.date %></h3>
+                    <h3 class="srk-article-resume-date"><%= post.date.display %></h3>
                 </div>
             <% }) %>
         </div>

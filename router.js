@@ -17,10 +17,11 @@ module.exports = {
             result[file] = { target: `_src/favicons/${file}` };
         });
 
+        result['about/index.html'] = { target: '_src/pages/about.ejs' }
         result['index.xml'] = { target: '_src/rss.ejs' }
-        
-        Object.keys(data.posts).forEach((postKey) => {
-            result['posts/' + postKey + '.html'] = { target: '_src/views/post.ejs', params: { post: data.posts[postKey] } }
+
+        data.postsIndex.forEach((post) => {
+            result['posts/' + post.slug + '/index.html'] = { target: '_src/views/post.ejs', params: { post } }
         });
 
         return result;

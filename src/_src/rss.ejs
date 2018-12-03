@@ -7,12 +7,12 @@
         <link><%= data.settings.url %></link>
         <description><%= data.settings.description %></description>
 
-        <% Object.keys(data.posts).forEach((postKey) => { %>
-            <% const post = data.posts[postKey] %>
+        <% data.postsIndex.forEach((post) => { %>
             <item>
-                <title><%= post.meta.title %></title>
-                <link><%= data.settings.url %>/posts/<%= postKey %>.html</link>
-                <guid><%= data.settings.url %>/posts/<%= postKey %>.html</guid>
+                <title><%= post.title %></title>
+                <link><%= data.settings.url %>/posts/<%= post.slug %></link>
+                <guid><%= data.settings.url %>/posts/<%= post.slug %></guid>
+                <pubDate><%= post.date.rss %></pubDate>
                 <description>
                     <%= post.html %>
                 </description>

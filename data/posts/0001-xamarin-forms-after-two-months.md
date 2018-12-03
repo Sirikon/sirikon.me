@@ -1,6 +1,7 @@
 ---
 title: Mi opinión sobre Xamarin.Forms tras dos meses
-date: 2017-01-19 21:30
+slug: xamarin-forms-after-two-months
+date: 2017-01-19 22:30
 ---
 En la oficina entró proyecto nuevo, que había que desarrollar en Xamarin.Forms, y yo ya manifesté mi interés en desarrollar aplicaciones móviles, pues me apetecía asomar la cabeza fuera de lo que es el Front-End web y ver qué hay ahí fuera.
 

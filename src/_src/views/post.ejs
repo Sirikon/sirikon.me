@@ -1,6 +1,13 @@
 <html>
     <head>
-        <%- include('../partials/_head.html', { title: params.post.title + ' | sirikon.me' }); %>
+        <%- include('../partials/_head.html', { title: params.post.title + ' | ' + data.settings.title, meta: [
+            ['title', params.post.title],
+            ['published_time', params.post.date.d.toISOString()],
+            ['author', data.settings.me.fullName],
+            ['site_name', data.settings.title],
+            ['type', 'article'],
+            ['url', data.settings.url + '/post/' + params.post.slug]
+        ] }); %>
     </head>
     <body>
         <%- include('../partials/_topbar.html', { currentLink: '' }); %>

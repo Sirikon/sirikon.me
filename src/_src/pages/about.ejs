@@ -1,30 +1,40 @@
 <html>
     <head>
-        <%- include('../partials/_head.html', { title: 'about | sirikon.me' }); %>
+        <%- include('../partials/_head.html', { title: 'About | ' + data.settings.title, meta: [
+            ['title', 'About ' + data.settings.me.name],
+            ['image', data.settings.url + '/assets/avatar.png'],
+            ['url', data.settings.url + '/about'],
+            ['type', 'profile'],
+            ['first_name', data.settings.me.name],
+            ['last_name', data.settings.me.surname.join(' ')],
+            ['username', data.settings.me.alias]
+        ] }); %>
     </head>
     <body>
         <%- include('../partials/_topbar.html', { currentLink: 'about' }); %>
 
         <div class="srk-body">
             <div class="srk-about">
-                <h1><span>Hi! I'm</span> <span>Carlos.</span></h1>
+                <h1><span>Hi! I'm</span> <span><%= data.settings.me.name %>.</span></h1>
 
                 <ul>
-                    <li>Born in <a href="https://www.openstreetmap.org/relation/340746" target="_blank" rel="noopener noreferer">Málaga, Andalusia</a>.</li>
-                    <li>Living in <a href="https://www.openstreetmap.org/relation/339549" target="_blank" rel="noopener noreferrer">Bilbao, Basque Country</a>.</li>
-                    <li>Working on <a href="https://www.plainconcepts.com/" target="_blank" rel="noopener noreferrer">Plain Concepts</a>.</li>
-                    <li>Mostly <a href="https://github.com/sirikon/" target="_blank" rel="noopener noreferer">programming</a>.</li>
-                    <li>Even some <a href="https://sirikon.itch.io/" target="_blank" rel="noopener noreferer">games</a>.</li>
-                    <li>Doing some <a href="https://500px.com/sirikon" target="_blank" rel="noopener noreferer">photography</a>.</li>
-                    <li>Talking on <a href="https://plaza.remolino.town/users/402" target="_blank" rel="noopener noreferer">the fediverse</a>.</li>
+                    <% data.settings.about.facts.forEach((fact) => { %>
+                        <li>
+                            <%= fact[0] %>
+                            <a href="<%= fact[2] %>" target="_blank" rel="noopener noreferer"><%= fact[1] %></a>.
+                        </li>
+                    <% }) %>
                 </ul>
 
                 <h2>Contact</h2>
 
                 <ul>
-                    <li>Email: <a href="mailto:hello@sirikon.me">hello@sirikon.me</a>.</li>
-                    <li>XMPP: <a href="xmpp:sirikon@suchat.org">sirikon@suchat.org</a>.</li>
-                    <li>ActivityPub: <a href="https://plaza.remolino.town/users/402" target="_blank" rel="noopener noreferer">@sirikon@plaza.remolino.town</a></li>
+                    <% data.settings.about.contact.forEach((fact) => { %>
+                        <li>
+                            <%= fact[0] %>
+                            <a href="<%= fact[2] %>" <% if (fact[2].indexOf('http') === 0) { %> target="_blank" rel="noopener noreferer" <% } %>><%= fact[1] %></a>.
+                        </li>
+                    <% }) %>
                 </ul>
             </div>
         </div>

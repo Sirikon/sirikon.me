@@ -1,6 +1,13 @@
 <html>
     <head>
-        <%- include('_src/partials/_head.html', { title: 'sirikon.me' }); %>
+        <%- include('_src/partials/_head.html', { title: data.settings.title, meta: [
+            ['title', data.settings.title],
+            ['site_name', data.settings.title],
+            ['description', data.settings.description],
+            ['type', 'website'],
+            ['image', data.settings.url + '/assets/avatar.png'],
+            ['url', data.settings.url]
+        ] }); %>
         <link rel="alternate" type="application/rss+xml" title="RSS Feed for sirikon.me" href="/index.xml" />
     </head>
     <body>

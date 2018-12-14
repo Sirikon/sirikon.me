@@ -1,0 +1,99 @@
+<html><head>
+	<title>Safari iOS Position Absolute</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf8">
+	<style>
+
+		pre {
+			max-width: 100%;
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		#outer_box {
+			background-color: whitesmoke;
+			padding: 5px;
+			position: relative;
+			z-index: 1;
+		}
+
+		#inner_box {
+			margin: 30px;
+			background-color: lightgrey;
+			position: relative;
+			padding: 5px;
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+			width: 80%;
+			height: 80px;
+			z-index: 1;
+		}
+
+		#fixed_box {
+			background-color: orangered;
+			width: 80px;
+			height: 80px;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 1000;
+			-webkit-transform: translate3d(0px,0px,1px);
+		}
+	</style>
+</head>
+<body>
+	<div id="outer_box">
+		<div id="inner_box">
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div id="fixed_box"></div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+			<div>Content</div>
+		</div>
+	</div>
+	<h1>iOS Position Fixed</h1>
+	<p>
+		This test have the following CSS:
+	</p>
+	<pre>#outer_box {
+	background-color: whitesmoke;
+	padding: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+#inner_box {
+	margin: 30px;
+	background-color: lightgrey;
+	position: relative;
+	padding: 5px;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	width: 80%;
+	height: 80px;
+	z-index: 1;
+}
+
+#fixed_box {
+	background-color: orangered;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+	-webkit-transform: translate3d(0px,0px,1px);
+}
+
+	</pre>
+	<p>In any browser the orange box should be in the top-left of the screen without problem, but in Safari for iOS, the box is hidden under the limits of the inner container, because it have the '-webkit-overflow-scrolling: touch;' property</p>
+
+</body></html>

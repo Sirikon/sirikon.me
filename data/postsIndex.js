@@ -34,10 +34,10 @@ module.exports = {
             .map((postKey) => {
                 const post = parentData.posts[postKey];
                 return {
-                    slug: post.meta.slug,
-                    title: post.meta.title,
-                    date: parseDate(post.meta.date),
-                    html: post.html
+                    get slug() { return post.meta.slug },
+                    get title() { return post.meta.title },
+                    get date() { return parseDate(post.meta.date) },
+                    get html() { return post.html }
                 }
             })
             .sort((a, b) => {

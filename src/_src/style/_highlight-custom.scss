@@ -1,0 +1,13 @@
+@import "./highlight";
+
+code:not(.hljs) {
+    background-color: #f2f2f2;
+    padding: 3px 7px !important;
+}
+
+code.hljs {
+    font-family: 'Operpass Mono', monospace;
+    text-rendering: optimizeLegibility;
+    line-height: 1.25em;
+    padding: 1em;
+}

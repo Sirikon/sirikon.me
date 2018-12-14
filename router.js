@@ -18,6 +18,7 @@ module.exports = {
         });
 
         result['about/index.html'] = { target: '_src/pages/about.ejs' }
+        result['projects/index.html'] = { target: '_src/pages/projects.ejs' }
         result['index.xml'] = { target: '_src/rss.ejs' }
 
         data.postsIndex.forEach((post) => {

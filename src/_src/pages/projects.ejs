@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <%- include('../partials/_head.html', { title: 'Projects | ' + data.settings.title, meta: [
+            ['title', 'Projects of ' + data.settings.me.name],
+            ['image', data.settings.url + '/assets/avatar.png'],
+            ['url', data.settings.url + '/projects'],
+            ['type', 'profile'],
+            ['first_name', data.settings.me.name],
+            ['last_name', data.settings.me.surname.join(' ')],
+            ['username', data.settings.me.alias]
+        ] }); %>
+    </head>
+    <body>
+        <%- include('../partials/_topbar.html', { currentLink: 'projects' }); %>
+
+        <div class="srk-body">
+            <div class="srk-projects">
+
+                <% data.projects.forEach((project) => { %>
+                    <div class="srk-projects-item">
+                        <div class="srk-projects-item-image" style="background-image:url('/assets/projects/<%= project.image %>');"></div>
+                        <a class="srk-projects-item-name" href="<%= project.link %>"><%= project.name %></a>
+                        <p class="srk-projects-item-description"><%= project.description %></p>
+                    </div>
+                <% }) %>
+
+            </div>
+        </div>
+
+        <%- include('../partials/_footer.html'); %>
+    </body>
+</html>

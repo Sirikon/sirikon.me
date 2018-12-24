@@ -2,6 +2,7 @@
 title: "ECMAScript 6: Symbols"
 slug: ecmascript-6-symbols
 date: 2015-09-28 15:00
+published: true
 ---
 Hoy nos toca repasar una de las últimas novedades en el mundillo del desarrollo web, los **Symbols de ECMAScript 6**.
 

@@ -2,6 +2,7 @@
 title: "Mi experiencia en Gamepolis 2015"
 slug: mi-opinion-sobre-gamepolis-2015
 date: 2015-07-27 12:00
+published: true
 ---
 El gran evento del año del videojuego en Málaga, **Gamepolis**, arrancaba este año su tercera edición **prometiendo ser una gran experiencia para todos sus asistentes**, ya disfrutaras de los videojuegos en calidad de usuario, desarrollador, empresario o inversor.
 

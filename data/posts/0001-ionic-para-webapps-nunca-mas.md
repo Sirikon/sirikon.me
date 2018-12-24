@@ -2,6 +2,7 @@
 title: "Ionic para WebApps: Nunca más"
 slug: ionic-para-webapps-nunca-mas
 date: 2016-03-28 20:15
+published: true
 ---
 Recientemente en el trabajo decidimos utilizar [Ionic Framework](https://ionicframework.com/) para el proyecto de una webapp, la idea era que dicha webapp debía correr en las últimas versiones de los principales navegadores (Lo que incluye IE11 y Edge).
 

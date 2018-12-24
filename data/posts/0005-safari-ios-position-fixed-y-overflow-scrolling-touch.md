@@ -2,6 +2,7 @@
 title: "Safari iOS: position:fixed y overflow-scrolling:touch"
 slug: safari-ios-position-fixed-y-overflow-scrolling-touch
 date: 2015-05-07 12:00
+published: true
 ---
 Recientemente he trabajado en un proyecto HTML5 con una UI muy compleja, he llegado a dedicar una semana entera a sólo una pantalla de la docena de pantallas con las que cuenta la aplicación.
 

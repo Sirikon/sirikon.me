@@ -1,6 +1,8 @@
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+const showUnpublished = process.env.SHOW_UNPUBLISHED === 'true';
+
 function parseDate(rawDate) {
     const parts = rawDate.split(' ');
     const date = parts[0];
@@ -33,6 +35,7 @@ module.exports = {
         return Object.keys(parentData.posts)
             .map((postKey) => {
                 const post = parentData.posts[postKey];
+                if (!post.meta.published && !showUnpublished) return null;
                 return {
                     get slug() { return post.meta.slug },
                     get title() { return post.meta.title },
@@ -40,6 +43,7 @@ module.exports = {
                     get html() { return post.html }
                 }
             })
+            .filter((post) => post !== null)
             .sort((a, b) => {
                 return a.date.d < b.date.d;
             });

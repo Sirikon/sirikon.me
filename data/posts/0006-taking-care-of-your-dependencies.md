@@ -34,7 +34,9 @@ We are the ones including a CLI tool framework inside our library "just in case 
 
 We are the ones including data collection mechanisms into our libraries so we can know who is installing it, or where, instead of... just not doing that.
 
-We are the ones needing a library for a left pad or checking if a string is a valid email instead of writting it by ourselves.
+We are the ones needing a library for a left pad or checking if a string is a valid email in a SPA instead of writting it by ourselves.
+
+> **EDIT**: As [Waweic suggested](https://pleasehug.me/users/waweic/statuses/101303516693025107), using a good-working external library to check if an email is valid might be the right thing to do in critical environments in terms of security, like a Node.js backend.
 
 ## Taking action
 

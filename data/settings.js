@@ -27,8 +27,7 @@ module.exports = {
                 ],
                 contact: [
                     ["Email", "hello@sirikon.me", "mailto:hello@sirikon.me"],
-                    ["ActivityPub", "@sirikon@plaza.remolino.town", "https://plaza.remolino.town/users/402"],
-                    ["Matrix", "@sirikon:portico.remolino.town", "https://matrix.to/#/@sirikon:portico.remolino.town"],
+                    ["ActivityPub", "@sirikon@plaza.remolino.town", "https://plaza.remolino.town/sirikon"],
                 ]
             }
         }

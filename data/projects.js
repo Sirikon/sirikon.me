@@ -3,7 +3,7 @@ module.exports = {
         return [
             {
                 name: "Waves Out!",
-                description: "A frenetic party or single player game where magnetism is the protagonist. For PS4!",
+                description: "A frenetic party or single player game where magnetism is the protagonist. Should be available on April 2019 for PS4.",
                 link: "https://wavesoutgame.com/",
                 image: "wavesout.png"
             },

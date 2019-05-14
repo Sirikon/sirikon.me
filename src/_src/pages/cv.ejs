@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <%- include('../partials/_head.html', { title: 'CV | ' + data.settings.title, meta: [
+            ['title', 'CV of ' + data.settings.me.name],
+            ['image', data.settings.url + '/assets/avatar.png'],
+            ['url', data.settings.url + '/cv'],
+            ['type', 'profile'],
+            ['first_name', data.settings.me.name],
+            ['last_name', data.settings.me.surname.join(' ')],
+            ['username', data.settings.me.alias]
+        ] }); %>
+    </head>
+    <body>
+        <%- include('../partials/_topbar.html', { currentLink: 'cv' }); %>
+
+        <div class="srk-body">
+            <div class="srk-cv">
+                <h1 class="srk-cv-header">
+                    <span class="srk-cv-header-title"><%= data.settings.me.fullName %></span>
+                    <span class="srk-cv-header-subtitle">
+                        <%= data.settings.job.currentPosition.role %>
+                        at
+                        <a href="<%= data.settings.job.currentPosition.company.url %>" target="_blank" rel="noopener noreferer">
+                            <%= data.settings.job.currentPosition.company.name %>
+                        </a>
+                    </span>
+                </h1>
+
+                <ul>
+                    <li>Born on <b>September 18th, 1993</b>.</li>
+                    <li>Living in <b>Bilbao, Basque Country</b>.</li>
+                    <li>My email is <b><a href="mailto:hello@sirikon.me">hello@sirikon.me</a></b>.</li>
+                    <li>My website is <b><a href="https://sirikon.me" target="_blank" rel="noopener noreferer">sirikon.me</a></b></li>
+                    <li>My GitHub account is <b><a href="https://github.com/sirikon" target="_blank" rel="noopener noreferer">github.com/sirikon</a></b>.</li>
+                </ul>
+
+                <section class="srk-cv-description">
+                    <p>
+                        I'm looking for the <b>next step</b> in my career. Getting involved in complex problems to be solved with a team which <b>I can learn from</b>, and hoping to also give something in return.
+                    </p>
+                    <p>
+                        Apart from programming, photography is also my hobby.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Skills</h2>
+
+                    <ul>
+                        <li>Frontend
+                            <ul>
+                                <li>HTTP protocol, <b>HTTP2 features</b>, <b>WebSockets</b>, the DOM, <b>JS</b> optimization, profilling and debugging.</li>
+                                <li>Javascript frameworks and libraries like <b>Vue</b>, <b>React</b> or <b>Mithril</b>.</li>
+                                <li>State management with <b>Redux</b> and <b>Vuex</b>.</li>
+                                <li>Architecture like <b>Flux</b> and <b>MVVM</b>.</li>
+                                <li><b>Javascript</b> itself, and supersets like <b>Typescript</b> and <b>Flow</b>.</li>
+                                <li>CSS preprocessors like <b>Sass</b> and LESS.</li>
+                            </ul>
+                        </li>
+                        <li>Backend
+                            <ul>
+                                <li>Languages like <b>Javascript</b> (with Node), <b>C#</b>, <b>Go</b> and <b>Python</b>. Could remember again Java or PHP.</li>
+                                <li>Databases like <b>SQL Server</b>, <b>MySQL</b>, <b>PostgreSQL</b>, <b>MongoDB</b>, <b>Redis</b>.</li>
+                                <li>Architectures and patterns like <b>DDD</b>, <b>CQS</b> and <b>CQRS</b>. But can tell when something like <b>MVC</b> is enough.</li>
+                                <li>Stuff like <b>distributed computing</b>, <b>message queues</b>, <b>paralellization</b>, <b>concurrency</b>, etc.</li>
+                            </ul>
+                        </li>
+                        <li>Infrastructure / Operations
+                            <ul>
+                                <li>Basic knowledge for <b>Linux</b> administration and networking.</li>
+                                <li>Mostly worked with <b>Azure</b> Cloud.</li>
+                                <li>Know <b>Docker</b> and <b>Docker Compose</b>.</li>
+                                <li>Container orchestration with <b>Kubernetes</b>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2>Work Experience</h2>
+
+                    <% data.settings.job.positions.forEach((position) => { %>
+                        <div class="srk-cv-position">
+                            <h3><%= position.role %> at
+                                <a href="<%= position.company.url %>" target="_blank" rel="noopener noreferer"><%= position.company.name %></a>
+                                <small><%= position.since %><%= position.until ? ' / ' + position.until : '' %></small>
+                            </h3>
+                            <div class="srk-cv-position-text">
+                                <% position.text.forEach((line) => { %>
+                                    <p><%= line %></p>
+                                <% }) %>
+                            </div>
+                        </div>
+                    <% }) %>
+
+                </section>
+
+            </div>
+        </div>
+
+        <%- include('../partials/_footer.html'); %>
+    </body>
+</html>

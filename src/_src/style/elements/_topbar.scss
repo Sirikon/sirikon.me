@@ -3,6 +3,10 @@
     height: $topbar-height;
     background-color: #fdfdfd;
 
+    @media print {
+        display: none;
+    }
+
     @media (max-width: 330px) {
         height: auto;
         padding: 1.2em 0 0 0;

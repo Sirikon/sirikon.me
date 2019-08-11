@@ -11,11 +11,21 @@ const job = {
         {
             role: 'Software Developer',
             company: {
+                name: 'Lookiero',
+                url: 'https://lookiero.es/'
+            },
+            since: 'August 2019',
+            until: 'Today',
+            text: []
+        },
+        {
+            role: 'Software Developer',
+            company: {
                 name: 'Plain Concepts',
                 url: 'https://www.plainconcepts.com/',
             },
             since: 'September 2015',
-            until: 'Today',
+            until: 'August 2019',
             text: [
                 'Development, consulting and training role in the Bilbao office of Plain Concepts for multiple clients in many industries, both brand new and legacy projects.',
                 'In charge of development of many solutions, using the latest technologies available that suit with the project\'s requirements.',
@@ -68,11 +78,11 @@ module.exports = {
                 facts: [
                     ["Born in", "Málaga, Andalusia", "https://www.openstreetmap.org/relation/340746"],
                     ["Living in", "Bilbao, Basque Country", "https://www.openstreetmap.org/relation/339549"],
-                    ["Working on", "Plain Concepts", "https://www.plainconcepts.com/"],
+                    ["Working on", job.currentPosition.company.name, job.currentPosition.company.url],
                     ["Mostly", "programming", "https://github.com/sirikon/"],
                     ["Even some", "games", "https://sirikon.itch.io/"],
                     ["Doing some", "photography", "https://500px.com/sirikon"],
-                    ["Talking on", "the fediverse", "https://plaza.remolino.town/users/402"],
+                    ["Talking on", "the fediverse", "https://plaza.remolino.town/sirikon"],
                 ],
                 contact: [
                     ["Email", "hello@sirikon.me", "mailto:hello@sirikon.me"],

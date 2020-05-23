@@ -45,7 +45,13 @@ module.exports = {
             })
             .filter((post) => post !== null)
             .sort((a, b) => {
-                return a.date.d < b.date.d;
-            });
+                if (a.date.d === b.date.d) {
+                    return 0
+                }else if (a.date.d < b.date.d) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            })
     }
 }

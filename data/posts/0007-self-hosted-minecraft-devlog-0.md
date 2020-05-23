@@ -30,7 +30,7 @@ They didn't reply until **30 hours later**. 30 hours in which both web and FTP k
 
 In their web page it said that you could ask for a refund if there was some technical issue out of their control, so I asked for a refund. The reply was that they couldn't refund me **4€** because they had to fix the FTP issue first. My last message was "Ok, keep the 4€, just cancel the service". 
 
-Here I am, still waiting for a service cancellation, two days later, while thinking, there has to be a better solution.
+Here I am, still waiting for a service cancellation, two days later, while thinking: There has to be a better solution.
 
 ## So, where do we start
 

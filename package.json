@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Sirikon/sirikon.me#readme",
   "dependencies": {
-    "pitch-cli": "~0.8.1"
+    "pitch-cli": "~0.10.0"
   }
 }

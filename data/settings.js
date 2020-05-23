@@ -70,7 +70,7 @@ module.exports = {
             title: 'Sirikon.me',
             description: `${me.fullName} personal website.`,
             url: process.env.SIRIKONME_URL || 'http://localhost:3000',
-            footer: `${me.alias}.me - 2019`,
+            footer: `${me.alias}.me - 2020`,
 
             me,
 

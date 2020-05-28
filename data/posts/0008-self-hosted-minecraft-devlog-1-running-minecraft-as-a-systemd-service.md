@@ -39,7 +39,7 @@ That's a pretty common Systemd service definition, but it will run Minecraft on 
 
 > Screen is a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells. [...] When screen is called, it creates a single window with a shell in it (or the specified command) and then gets out of your way so that you can use the program as you normally would. [...] Programs continue to run when their window is currently not visible and even when the whole screen session is detached from the users terminal.
 
-With Screen we can run a program and then **detach it** from our terminal. Then we can **reattach to it** from anywhere.
+With Screen we can run a program and **detach it** from our terminal. Then we can **reattach to it** from anywhere.
 
 In the following example, notice the "detached" message inside the terminal on the left. That happens when you use `Ctrl + a` and then `d` (Action -> Detach).
 
@@ -74,11 +74,11 @@ screen -dmS coolping ping 8.8.8.8
 
 After that, run `screen -ls` and see the name of the session. It should be something like "xxxx.coolping".
 
-If there's no sockname defined, it gets one by default. Defining a sockname is useful because it lets us re-attach to sessions by a recognisable name, which is indeed useful when you have more than one session and need to re-attach to an specific one.
+If there's no sockname defined, it gets one by default. Defining a sockname is useful because it lets us re-attach to sessions by a recognisable name, which comes handy when you have more than one session and need to re-attach to an specific one.
 
 ```bash
 screen -r coolping
-# Is better than
+# is better than
 screen -r 8381
 ```
 
@@ -120,7 +120,7 @@ java -jar minecraft_server.jar
 
 Once the world is loaded (You'll know because there's a message saying "Done!"), produce a SIGINT by typing `Ctrl + c`.
 
-What you should see is Minecraft closing itself **safely**. Logging out all the players, saving the world, and finally finishing the process. Minecraft always does this when receiving a SIGINT, and you can send a SIGINT (Or [any other signal](https://www.man7.org/linux/man-pages/man7/signal.7.html)) to any running process, interactively or not.
+What you should see is Minecraft closing itself **safely**. Disconnecting all the players, saving the world, and finally finishing the process. Minecraft always does this when receiving a SIGINT, and you can send a SIGINT (Or [any other signal](https://www.man7.org/linux/man-pages/man7/signal.7.html)) to any running process, interactively or not.
 
 Screen also receives signals. When a screen session receives a SIGINT, it will send a **SIGINT** to it's **wrapped process**, too.
 

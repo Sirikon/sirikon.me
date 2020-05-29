@@ -6,7 +6,7 @@ title: "Self Hosted Minecraft: Devlog #1. Running Minecraft as a Systemd Service
 ---
 The official Minecraft Server implementation is written in Java. As of today, the recommended JRE version for Minecraft is **Java 8**.
 
-You could make it work with Java 11 or later, but what I was trying to host was Minecraft Forge 1.12.2, which [only works with Java 8](https://www.minecraftforge.net/forum/topic/73597-starting-forge-1122-with-java-11-solved/?tab=comments#comment-353851). Even if we were using a more up-to-date version of Minecraft, the server performs better in terms of stability with Java 8, so, we'll stick with that version for now.  
+Depending on the Minecraft version or variation you're running, the compatibility with different Java versions might differ. Do some research about the correct Java version to run. In my case, I was trying to host Minecraft Forge 1.12.2, which [only works with Java 8](https://www.minecraftforge.net/forum/topic/73597-starting-forge-1122-with-java-11-solved/?tab=comments#comment-353851), so, we'll stick with that version from now on.
 
 Once you have Java available in your `PATH`, running Minecraft Server is really straightforward:
 
